@@ -1,19 +1,15 @@
-var i = 4
-var d = 4.0
-var s = "HackerRank "
+// Enter your code here. Read input from STDIN. Print output to STDOUT
 
-// Declare second integer, double, and String variables.
+var mealCost: Double
+var tipPer: Int
+var taxPer: Int
 
-var line1: Int
-var line2: Double
-var line3: String
+mealCost = Double(readLine()!)!
+tipPer = Int(readLine()!)!
+taxPer = Int(readLine()!)!
 
-// Read and save an integer, double, and String to your variables.
-line1 = Int(readLine()!)!
-line2 = Double(readLine()!)!
-line3 = readLine()!
+let tip = Double(tipPer) * mealCost / 100
+let tax = Double(taxPer) * mealCost / 100
 
-// Print the sum
-print(i + line1)
-print(d + line2)
-print(s + line3)
+let totalCost = mealCost + tip + tax
+print("The total meal cost is \(Int(totalCost.rounded())) dollars.")
